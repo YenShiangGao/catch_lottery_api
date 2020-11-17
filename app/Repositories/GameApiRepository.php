@@ -15,7 +15,7 @@ class GameApiRepository
 
     public function lottery_data($periodS, $periodE, $gameid)
     {
-        return $this->lt_periods->whereRaw('be_lottory_time BETWEEN ? AND ?', array($periodS, $periodE))
+        return $this->lt_periods->whereRaw('be_lottery_time BETWEEN ? AND ?', array($periodS, $periodE))
             ->where('game_id', $gameid)
             ->where('lottery_status', '1')
             ->orderBy('period_str', 'DESC')

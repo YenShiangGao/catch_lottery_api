@@ -34,8 +34,6 @@ class GameApiService
 
         $lottery_data = $this->gameApiRepository->lottery_data($periodS,$periodE,$game_id);
 
-        dd($lottery_data);
-
-        return response()->json($arr,'200');
+        return $lottery_data;
     }
 }

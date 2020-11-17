@@ -21,6 +21,6 @@ class GameApiController extends Controller
         $input_arr = $request->toArray();
         $result = $this->gameApiService->specify($input_arr);
 
-        return $result;
+        return $this->message($result);
     }
 }
