@@ -35,6 +35,11 @@ class GameApiController extends Controller
         $arr = $request->toArray();
         $result = $this->gameApiService->specifyPeriod($arr);
 
-
+        //自訂義response
+        if (!$result) {
+            return $this->notFond();
+        } else {
+            return $this->message($result);
+        }
     }
 }

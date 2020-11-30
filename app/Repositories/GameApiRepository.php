@@ -4,6 +4,7 @@
 namespace App\Repositories;
 use App\Models\LT_history;
 use App\Models\LT_periods;
+use App\Models\LT_url;
 
 class GameApiRepository
 {
@@ -13,7 +14,7 @@ class GameApiRepository
     {
         $this->lt_periods = new LT_periods();
         $this->lt_history = new LT_history();
-        $this->lt_url;
+        $this->lt_url     = new LT_url();
     }
 
     public function lottery_data($periodS, $periodE, $gameid)
@@ -36,7 +37,8 @@ class GameApiRepository
 
     public function lottery_url_by_id($id)
     {
-
+        return $this->lt_url
+                ->where('id', $id)
+                ->get();
     }
-
 }
