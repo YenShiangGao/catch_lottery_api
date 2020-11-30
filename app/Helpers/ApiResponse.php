@@ -91,7 +91,7 @@ trait ApiResponse
     public function message($message, $status = "success")
     {
         return $this->status($status,[
-            'message' => $message
+            'data' => $message
         ]);
     }
 

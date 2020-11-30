@@ -22,13 +22,27 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  *  樂透群
  */
 Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
+
     /**
          *  抓獎用
-         *  @url --  POST   localhost / api /  lottery / catch
-         *  @params -- { [gameid' => 遊戲id],
-         *                       ['periodS' => '起始時間'] ,
-         *                       ['periodE' => '結束時間'] }
+         *  @url --  POST   localhost / api /  lottery / specifyGame
+         *  @params -- {
+         *                          ['gameid' => 遊戲id],
+         *                          ['periodS' => '起始時間'] ,
+         *                          ['periodE' => '結束時間']
+         *                        }
          * @return -- response(json_data,  status)
          */
-    Route::post('catch', 'GameApiController@specify');
+    Route::post('specifyGame', 'GameApiController@specifyGame');
+
+    /**
+         *  抓獎用 (由期數抓取網址ID)
+         * @url -- POST api / lottery / specifyPeriod
+         * @params -- {
+         *                          [ ' gameid ' => " 遊戲id "],
+         *                          [ ' period_str ' => " 日期字串" ]
+         *                       }
+         * @return -- response(json_data, status)
+         */
+    Route::post('specifyPeriod', 'GameApiController@specifyPeriod');
 });

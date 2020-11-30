@@ -2,15 +2,18 @@
 
 
 namespace App\Repositories;
+use App\Models\LT_history;
 use App\Models\LT_periods;
 
 class GameApiRepository
 {
-    protected $lt_periods;
+    protected $lt_periods, $lt_history, $lt_url;
 
     public function __construct()
     {
         $this->lt_periods = new LT_periods();
+        $this->lt_history = new LT_history();
+        $this->lt_url;
     }
 
     public function lottery_data($periodS, $periodE, $gameid)
@@ -20,6 +23,20 @@ class GameApiRepository
             ->where('lottery_status', '1')
             ->orderBy('period_str', 'DESC')
             ->get();
+    }
+
+    public function lottery_history($gameid, $period_str)
+    {
+        return $this->lt_history
+                ->where('game_id', $gameid)
+                ->where('period_str', $period_str)
+                ->orderBy('lottery_time')
+                ->get();
+    }
+
+    public function lottery_url_by_id($id)
+    {
+
     }
 
 }

@@ -13,14 +13,28 @@ class GameApiController extends Controller
 
     public function __construct()
     {
+        //特過ServiceProvider 進行呼叫
         $this->gameApiService = App::make('GameApiService');
     }
 
-    public function specify(Request $request)
+    public function specifyGame(Request $request)
     {
         $input_arr = $request->toArray();
-        $result = $this->gameApiService->specify($input_arr);
+        $result = $this->gameApiService->specifyGame($input_arr);
 
-        return $this->message($result);
+        //自訂義response
+        if (!$result) {
+            return $this->notFond();
+        } else {
+            return $this->message($result);
+        }
+    }
+
+    public function specifyPeriod(Request $request)
+    {
+        $arr = $request->toArray();
+        $result = $this->gameApiService->specifyPeriod($arr);
+
+
     }
 }
