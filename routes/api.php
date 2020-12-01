@@ -45,4 +45,15 @@ Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
          * @return -- response(json_data, status)
          */
     Route::post('specifyPeriod', 'GameApiController@specifyPeriod');
+
+    /**
+         *  錯誤抓獎系統查詢
+         * @url -- POST api / lottery / specifyPeriodError
+         * @params -- {
+         *                          [ " periodS " => " 起始時間 " ],
+         *                          [ " periodE " => " 結束時間 " ]
+         *                       }
+         * @return --  狀態回傳訊息和期數錯誤資料
+         */
+    Route::post('specifyPeriodError', 'GameApiController@specifyPeriodError');
 });

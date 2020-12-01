@@ -86,4 +86,22 @@ class GameApiService
 
         return $GameTypeInfo;
     }
+
+    public function specifyPeriodErrorService($arr)
+    {
+        if ((!strtotime($arr['begin_date'])))
+            return false;
+        $end_date   = Carbon::parse($arr['end_date'])->toDateTimeString();
+        $begin_date = Carbon::parse($arr['begin_date'])->toDateTimeString();
+
+        $error_repository = $this->gameApiRepository->periodError_by_time($begin_date, $end_date);
+        $error_data = $error_repository->toArray();
+
+        foreach ($error_data as $key => $item)
+        {
+            $lottery_id = $this->gameApiRepository->period_by_id($item['lottery_id']);
+            $error_data[$key]["period_str"] = $lottery_id['period_str'];
+        }
+        return $error_data;
+    }
 }

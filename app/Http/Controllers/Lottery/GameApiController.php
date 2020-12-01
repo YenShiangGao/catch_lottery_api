@@ -42,4 +42,18 @@ class GameApiController extends Controller
             return $this->message($result);
         }
     }
+
+    public function specifyPeriodError(Request $request)
+    {
+        $arr = $request->toArray();
+
+        $result = $this->gameApiService->specifyPeriodErrorService($arr);
+
+        //自訂義response
+        if (!$result || $result == null) {
+            return $this->notFond();
+        } else {
+            return $this->message($result);
+        }
+    }
 }

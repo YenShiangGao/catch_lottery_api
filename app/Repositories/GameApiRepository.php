@@ -3,18 +3,20 @@
 
 namespace App\Repositories;
 use App\Models\LT_history;
+use App\Models\LT_period_error;
 use App\Models\LT_periods;
 use App\Models\LT_url;
 
 class GameApiRepository
 {
-    protected $lt_periods, $lt_history, $lt_url;
+    protected $lt_periods, $lt_history, $lt_url, $lt_period_error;
 
     public function __construct()
     {
-        $this->lt_periods = new LT_periods();
-        $this->lt_history = new LT_history();
-        $this->lt_url     = new LT_url();
+    $this->lt_periods           = new LT_periods();
+        $this->lt_history       = new LT_history();
+        $this->lt_url           = new LT_url();
+        $this->lt_period_error  = new LT_period_error();
     }
 
     public function lottery_data($periodS, $periodE, $gameid)
@@ -40,5 +42,20 @@ class GameApiRepository
         return $this->lt_url
                 ->where('id', $id)
                 ->get();
+    }
+
+    public function periodError_by_time($begin, $end)
+    {
+        return $this->lt_period_error
+                ->whereBetween('created_at', [$begin,$end])
+                ->get();
+    }
+
+    public function period_by_id($id)
+    {
+        return $this->lt_periods
+                ->select('period_str')
+                ->where('id', $id)
+                ->first();
     }
 }
