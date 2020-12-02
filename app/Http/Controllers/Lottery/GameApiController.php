@@ -84,4 +84,16 @@ class GameApiController extends Controller
             return $this->message($result);
         }
     }
+
+    public function gameGroup ()
+    {
+        $result = $this->gameApiService->gameGroup();
+
+        //自訂義response
+        if (!$result || $result == null) {
+            return $this->notFond();
+        } else {
+            return $this->message($result);
+        }
+    }
 }

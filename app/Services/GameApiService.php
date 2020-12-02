@@ -136,4 +136,34 @@ class GameApiService
 
         return $result;
     }
+
+    public function gameGroup ()
+    {
+        $game_result = $this->gameApiRepository->game(false);
+        $game_data = $game_result->toArray();
+        $url_array = array();
+        $result = array();
+        foreach ($game_data as $key => $val)
+        {
+            $url_result = $this->gameApiRepository->lottery_url_by_gameid_and_enable($val['id'], 0);
+            $url_data = $url_result->toArray();
+
+            foreach ($url_data as $k => $v)
+            {
+                $url_array[$k]["id"] = $v["id"];
+                $url_array[$k]["url"] = $v["url"];
+                $url_array[$k]["api_name"] = $v["api_name"];
+                $url_array[$k]["proxy_enable"] = $v["proxy_enable"];
+            }
+            $obj = array(
+                "cname"     => $val["cname"],
+                "ename"     => $val["ename"],
+                "gameId"    => $val["id"],
+                "param_2"   => json_encode($val["param_2"], true),
+                "url"       => $url_array
+            );
+            array_push($result, $obj);
+        }
+        return $result;
+    }
 }

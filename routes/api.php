@@ -78,4 +78,12 @@ Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
          * @return -- 狀態回傳 & 抓取遊戲id和遊戲假期
          */
     Route::post('vacList', 'GameApiController@vacList');
+
+    /**
+         *  所有遊戲和遊戲網址
+         * @url -- get api / lottery / gameGroup
+         * @params -- Null
+         * @return -- 狀態回傳 & 名稱、開獎格式、遊戲ID
+         */
+    Route::get('gameGroup', 'GameApiController@gameGroup');
 });

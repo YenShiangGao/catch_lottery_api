@@ -2,6 +2,7 @@
 
 
 namespace App\Repositories;
+use App\Models\LT_game;
 use App\Models\LT_history;
 use App\Models\LT_openset;
 use App\Models\LT_period_error;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 class GameApiRepository
 {
-    protected $lt_periods, $lt_history, $lt_url, $lt_period_error, $lt_openset, $lt_vac;
+    protected $lt_periods, $lt_history, $lt_url, $lt_period_error, $lt_openset, $lt_vac, $lt_game;
 
     public function __construct()
     {
@@ -22,6 +23,7 @@ class GameApiRepository
         $this->lt_period_error  = new LT_period_error();
         $this->lt_openset       = new LT_openset();
         $this->lt_vac           = new LT_vac();
+        $this->lt_game          = new LT_game();
     }
 
     public function lottery_data($periodS, $periodE, $gameid)
@@ -46,6 +48,14 @@ class GameApiRepository
     {
         return $this->lt_url
                 ->where('id', $id)
+                ->get();
+    }
+
+    public function lottery_url_by_gameid_and_enable($game_id, $enable)
+    {
+        return $this->lt_url
+                ->where('game_id', $game_id)
+                ->where('enable', $enable)
                 ->get();
     }
 
@@ -92,5 +102,12 @@ class GameApiRepository
        }
 
        return DB::select("select id, game_id, vacStart, vacEnd from LT_vac where 1=1". $sql);
+    }
+
+    public function game($enable)
+    {
+        return $this->lt_game
+                ->where('enable', $enable)
+                ->get();
     }
 }
