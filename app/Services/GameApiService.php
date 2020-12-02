@@ -5,7 +5,6 @@ namespace App\Services;
 
 use Illuminate\Support\Carbon;
 use App\Repositories\GameApiRepository;
-use App\Helpers\ApiResponse;
 
 class GameApiService
 {
@@ -103,5 +102,28 @@ class GameApiService
             $error_data[$key]["period_str"] = $lottery_id['period_str'];
         }
         return $error_data;
+    }
+
+    public function openDateService ($arr)
+    {
+        $result = null;
+        if ($arr["year"] === null) {
+            $year = Carbon::now()->year;
+        } else {
+            $year = $arr['year'];
+        }
+        if ($arr['month'] === null) {
+            $repository_res = $this->gameApiRepository->openset_by_year($arr['gameid'], $year)->toArray();
+        } else {
+            $repository_res = $this->gameApiRepository->openset_by_date($arr['gameid'], $year, $arr['month'])->toArray();
+        }
+        dd($repository_res);
+        foreach ($repository_res as $key => $val)
+        {
+            $result[$key]["Lottery_year"]  = $val[$key]["lottery_year"];
+            $result[$key]["Lottery_month"] = $val[$key]["lottery_month"];
+            $result[$key]["Lottery_day"]   = $val[$key]["lottery_day"];
+        }
+        return $result;
     }
 }

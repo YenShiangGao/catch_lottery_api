@@ -56,4 +56,15 @@ Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
          * @return --  狀態回傳訊息和期數錯誤資料
          */
     Route::post('specifyPeriodError', 'GameApiController@specifyPeriodError');
+
+    /**
+         *  抓取六合彩和萬字票開獎日期
+         * @url -- POST api / lottery / openDate
+         * @params -- {
+         *                          [ " gameid " => " 遊戲ID " ],
+         *                          [ " year "      => " 年分 " ],
+         *                          [ " month "   => " 月份 " ]
+         * @return -- 狀態回傳 & 開獎的年月日
+         */
+    Route::post('openDate', 'GameApiController@openDate');
 });
