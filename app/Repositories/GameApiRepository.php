@@ -7,10 +7,12 @@ use App\Models\LT_openset;
 use App\Models\LT_period_error;
 use App\Models\LT_periods;
 use App\Models\LT_url;
+use App\Models\LT_vac;
+use Illuminate\Support\Facades\DB;
 
 class GameApiRepository
 {
-    protected $lt_periods, $lt_history, $lt_url, $lt_period_error, $lt_openset;
+    protected $lt_periods, $lt_history, $lt_url, $lt_period_error, $lt_openset, $lt_vac;
 
     public function __construct()
     {
@@ -19,6 +21,7 @@ class GameApiRepository
         $this->lt_url           = new LT_url();
         $this->lt_period_error  = new LT_period_error();
         $this->lt_openset       = new LT_openset();
+        $this->lt_vac           = new LT_vac();
     }
 
     public function lottery_data($periodS, $periodE, $gameid)
@@ -76,5 +79,18 @@ class GameApiRepository
             ->where('lottery_year', $year)
             ->where('lottery_month', $month)
             ->get();
+    }
+
+    public function vac_data ($year = null, $game_id = null)
+    {
+       $sql = null;
+       if ( $year != null ) {
+           $sql .= " AND vacStart > '" . $year . "-01-01 00:00:00' AND vacEnd < '". $year . "-12-31 23:59:59'";
+       }
+       if ( $game_id != null ) {
+           $sql .= "and game_id =" . $game_id;
+       }
+
+       return DB::select("select id, game_id, vacStart, vacEnd from LT_vac where 1=1". $sql);
     }
 }

@@ -126,4 +126,14 @@ class GameApiService
         }
         return $result;
     }
+
+    public function vacList ($arr)
+    {
+        $year    = $arr['year'];
+        $game_id = $arr['gameid'];
+
+        $result = $this->gameApiRepository->vac_data($year, $game_id);
+
+        return $result;
+    }
 }

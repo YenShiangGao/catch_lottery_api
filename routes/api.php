@@ -67,4 +67,15 @@ Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
          * @return -- 狀態回傳 & 開獎的年月日
          */
     Route::post('openDate', 'GameApiController@openDate');
+
+    /**
+         *  抓取遊戲假期
+         * @url -- POST api / lottery / vacList
+         * @params -- {
+         *                          [ " year " => " 年分 " ],
+         *                          [ " gameid " => " 遊戲ID " ]
+         *                       }
+         * @return -- 狀態回傳 & 抓取遊戲id和遊戲假期
+         */
+    Route::post('vacList', 'GameApiController@vacList');
 });
