@@ -96,4 +96,16 @@ class GameApiController extends Controller
             return $this->message($result);
         }
     }
+
+    public function openNumCheck ()
+    {
+        $result = $this->gameApiService->openNumCheck();
+
+        //自訂義response
+        if (!$result || $result == null) {
+            return $this->notFond();
+        } else {
+            return $this->message($result);
+        }
+    }
 }

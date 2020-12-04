@@ -166,4 +166,38 @@ class GameApiService
         }
         return $result;
     }
+
+    public function openNumCheck()
+    {
+        $data = $this->gameApiRepository->game(0)->toArray();
+        $today= Carbon::now()->toDateString();
+        $today .= ' 00:00:00';
+        $Notice_count = 0;
+
+        foreach ($data as $key => $value)
+        {
+            $check_data = $this->gameApiRepository->periods_for_check($value['id'], 0, $today);
+
+            foreach ($check_data as $k => $v)
+            {
+                $noticeTime = $value["noticeTime"];
+                $rangeTime  = Carbon::parse("-".$noticeTime."seconds")->toDateTimeString();
+                $beLotteryTime = $v["be_lottery_time"];
+
+                $telegram_result = $this->gameApiRepository->telegram_by_group_web('1', 'N', 'TEST');
+
+                if ($rangeTime > $beLotteryTime) {
+                    $Notice_count++;
+
+                    foreach ($telegram_result as $ID => $item)
+                    {
+                        $msg = $value["cname"]. " 第".$v["period_str"]."期，\n預計開獎時間為".$beLotteryTime;
+                        $notice = array(
+                            'noticeCode' => 'delayOpen'
+                        );
+                    }
+                }
+            }
+        }
+    }
 }

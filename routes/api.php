@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
 
 /**
  *  樂透群
@@ -81,9 +81,17 @@ Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
 
     /**
          *  所有遊戲和遊戲網址
-         * @url -- get api / lottery / gameGroup
+         * @url -- GET api / lottery / gameGroup
          * @params -- Null
          * @return -- 狀態回傳 & 名稱、開獎格式、遊戲ID
          */
     Route::get('gameGroup', 'GameApiController@gameGroup');
+
+    /**
+         *  檢查開獎時間
+         *  @url --  GET api / lottery / openNumCheck
+         *  @params -- NULL
+         *  @return -- 狀態回傳 &  遊戲ID、期數、使用者ID
+         */
+    Route::get('openNumCheck', 'GameApiController@openNumCheck');
 });

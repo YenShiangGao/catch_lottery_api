@@ -9,11 +9,12 @@ use App\Models\LT_period_error;
 use App\Models\LT_periods;
 use App\Models\LT_url;
 use App\Models\LT_vac;
+use App\Models\tb_telegram_user;
 use Illuminate\Support\Facades\DB;
 
 class GameApiRepository
 {
-    protected $lt_periods, $lt_history, $lt_url, $lt_period_error, $lt_openset, $lt_vac, $lt_game;
+    protected $lt_periods, $lt_history, $lt_url, $lt_period_error, $lt_openset, $lt_vac, $lt_game, $tb_telegram_user;
 
     public function __construct()
     {
@@ -24,15 +25,27 @@ class GameApiRepository
         $this->lt_openset       = new LT_openset();
         $this->lt_vac           = new LT_vac();
         $this->lt_game          = new LT_game();
+        $this->tb_telegram_user = new tb_telegram_user();
     }
 
     public function lottery_data($periodS, $periodE, $gameid)
     {
-        return $this->lt_periods->whereRaw('be_lottery_time BETWEEN ? AND ?', array($periodS, $periodE))
+        return $this->lt_periods
+            ->whereRaw('be_lottery_time BETWEEN ? AND ?', array($periodS, $periodE))
             ->where('game_id', $gameid)
             ->where('lottery_status', '1')
             ->orderBy('period_str', 'DESC')
             ->get();
+    }
+
+    public function periods_for_check($game_id, $status, $today)
+    {
+        return $this->lt_periods
+                ->where('game_id', $game_id)
+                ->where('lottery_status', $status)
+                ->where('be_lottery_time','>=', $today)
+                ->get()
+                ->toArray();
     }
 
     public function lottery_history($gameid, $period_str)
@@ -109,5 +122,15 @@ class GameApiRepository
         return $this->lt_game
                 ->where('enable', $enable)
                 ->get();
+    }
+
+    public function telegram_by_group_web ($group_id, $enable, $web)
+    {
+        return $this->tb_telegram_user
+                ->where('group_id', $group_id)
+                ->where('enable',   $enable)
+                ->where('web', $web)
+                ->get()
+                ->toArray();
     }
 }
