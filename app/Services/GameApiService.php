@@ -3,16 +3,18 @@
 
 namespace App\Services;
 
+use App\Helpers\PublicHelper;
 use Illuminate\Support\Carbon;
 use App\Repositories\GameApiRepository;
 
 class GameApiService
 {
-    protected $gameApiRepository;
+    protected $gameApiRepository, $publicHelper;
 
     public function __construct()
     {
         $this->gameApiRepository = new GameApiRepository();
+        $this->publicHelper      = new PublicHelper();
     }
 
     public function specifyGame($arr)
@@ -173,7 +175,7 @@ class GameApiService
         $today= Carbon::now()->toDateString();
         $today .= ' 00:00:00';
         $Notice_count = 0;
-
+        dd($this->publicHelper->noticeMsg());
         foreach ($data as $key => $value)
         {
             $check_data = $this->gameApiRepository->periods_for_check($value['id'], 0, $today);
@@ -195,6 +197,7 @@ class GameApiService
                         $notice = array(
                             'noticeCode' => 'delayOpen'
                         );
+
                     }
                 }
             }
