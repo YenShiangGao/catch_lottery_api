@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe67d7b8-8819-4814-acee-831035e493f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/NoticeMsg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/PublicHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/noticecode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/HelperRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/BaseHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/NoticeMsg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/NoticeMsg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/PublicHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/PublicHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/GameApiRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/GameApiRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/GameApiService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/GameApiService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,103 +23,109 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/routes/api.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1444">
-                  <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#7#35#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2014">
-                  <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#48#84#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Services/GameApiService.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="177" column="45" selection-start-line="177" selection-start-column="45" selection-end-line="177" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#33#62#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Helpers/ApiResponse.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
-                  <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-                  <folding>
-                    <element signature="e#31#99#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Helpers/PublicHelper.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="152">
-                  <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Helpers/NoticeMsg.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/noticecode.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="3" column="19" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Repositories/GameApiRepository.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="837">
-                  <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#36#59#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+              <folding>
+                <element signature="e#75#457#0#PHP" />
+                <element signature="e#573#588#0#PHP" />
+                <element signature="e#670#1056#0#PHP" />
+                <element signature="e#1127#1462#0#PHP" />
+                <element signature="e#1537#1857#0#PHP" />
+                <element signature="e#1942#2283#0#PHP" />
+                <element signature="e#2348#2653#0#PHP" />
+                <element signature="e#2716#2871#0#PHP" />
+                <element signature="e#2937#3098#0#PHP" />
+                <element signature="e#3170#3322#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="729">
+              <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+              <folding>
+                <element signature="e#233#368#0#PHP" />
+                <element signature="e#374#694#0#PHP" />
+                <element signature="e#565#688#0#PHP" />
+                <element signature="e#628#688#0#PHP" />
+                <element signature="e#700#1012#0#PHP" />
+                <element signature="e#883#1006#0#PHP" />
+                <element signature="e#946#1006#0#PHP" />
+                <element signature="e#1018#1367#0#PHP" />
+                <element signature="e#1219#1361#0#PHP" />
+                <element signature="e#1301#1361#0#PHP" />
+                <element signature="e#1373#1703#0#PHP" />
+                <element signature="e#1555#1697#0#PHP" />
+                <element signature="e#1637#1697#0#PHP" />
+                <element signature="e#1709#2030#0#PHP" />
+                <element signature="e#1882#2024#0#PHP" />
+                <element signature="e#1964#2024#0#PHP" />
+                <element signature="e#2036#2304#0#PHP" />
+                <element signature="e#2156#2298#0#PHP" />
+                <element signature="e#2238#2298#0#PHP" />
+                <element signature="e#2310#2584#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Services/GameApiService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2187">
+              <caret line="229" selection-start-line="229" selection-end-line="229" />
+              <folding>
+                <element signature="e#274#430#0#PHP" />
+                <element signature="e#436#1046#0#PHP" />
+                <element signature="e#592#748#0#PHP" />
+                <element signature="e#664#748#0#PHP" />
+                <element signature="e#757#913#0#PHP" />
+                <element signature="e#829#913#0#PHP" />
+                <element signature="e#1052#2494#0#PHP" />
+                <element signature="e#1431#1529#0#PHP" />
+                <element signature="e#1701#1805#0#PHP" />
+                <element signature="e#1874#2078#0#PHP" />
+                <element signature="e#2128#2456#0#PHP" />
+                <element signature="e#2500#3191#0#PHP" />
+                <element signature="e#2939#3157#0#PHP" />
+                <element signature="e#3197#4048#0#PHP" />
+                <element signature="e#3274#3404#0#PHP" />
+                <element signature="e#3354#3404#0#PHP" />
+                <element signature="e#3413#3698#0#PHP" />
+                <element signature="e#3560#3698#0#PHP" />
+                <element signature="e#3738#4018#0#PHP" />
+                <element signature="e#4054#4261#0#PHP" />
+                <element signature="e#4267#5337#0#PHP" />
+                <element signature="e#4475#5307#0#PHP" />
+                <element signature="e#4684#4973#0#PHP" />
+                <element signature="e#4993#5257#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/GameApiRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
+              <folding>
+                <element signature="e#437#894#0#PHP" />
+                <element signature="e#900#949#0#PHP" />
+                <element signature="e#1784#1833#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -125,6 +135,10 @@
       <find>class Facade</find>
       <find>bind</find>
       <find>lt_periods</find>
+      <find>autoload</find>
+      <find>openNumCheck</find>
+      <find>periods_for_check</find>
+      <find>game</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,9 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_11_16_083321_create_lt_periods_table.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/seeds/LotteryTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/app/Helpers/ApiReponseFacade.php" />
@@ -168,22 +179,25 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_12_02_070353_create_lt_game_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/GameSeederTable.php" />
         <option value="$PROJECT_DIR$/database/factories/GameFactory.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_12_03_033757_create_tb_telegram_user_table.php" />
         <option value="$PROJECT_DIR$/app/Models/tb_telegram_user.php" />
         <option value="$PROJECT_DIR$/database/factories/TelegramUserFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/TelegramUserTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/GameApiRepository.php" />
         <option value="$PROJECT_DIR$/app/Helpers/NoticeMeg.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Helpers/BaseFunction.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Helpers/BaseHelper.php" />
         <option value="$PROJECT_DIR$/config/noticecode.php" />
         <option value="$PROJECT_DIR$/app/Helpers/PublicHelper.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_01_06_061615_create_tb_telegram_notice_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/tb_telegram_notice.php" />
         <option value="$PROJECT_DIR$/app/Helpers/NoticeMsg.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/HelperRepository.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php" />
         <option value="$PROJECT_DIR$/app/Services/GameApiService.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/GameApiRepository.php" />
       </list>
     </option>
   </component>
@@ -293,10 +307,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="337" />
-    <option name="y" value="80" />
-    <option name="width" value="1216" />
-    <option name="height" value="1223" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1874" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -304,6 +318,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,18 +354,54 @@
               <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Lottery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catch_lottery_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catch_lottery_api" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,18 +464,26 @@
       <workItem from="1608197913778" duration="623000" />
       <workItem from="1608254214809" duration="6511000" />
       <workItem from="1608514081567" duration="4000" />
-      <workItem from="1608862517408" duration="4429000" />
+      <workItem from="1608862517408" duration="5344000" />
+      <workItem from="1609232460726" duration="8000" />
+      <workItem from="1609901830206" duration="13892000" />
+      <workItem from="1609996054616" duration="5328000" />
+      <workItem from="1610009928887" duration="1465000" />
+      <workItem from="1610518011787" duration="1199000" />
+      <workItem from="1610618169046" duration="3730000" />
+      <workItem from="1610701302870" duration="4476000" />
+      <workItem from="1610932225831" duration="612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168590000" />
+    <option name="totallyTimeSpent" value="200215000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16782007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17750826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -439,7 +498,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="10" weight="0.32995495" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49913496" weight="0.34419942" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49913496" weight="0.34256694" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50086504" side_tool="true" weight="0.3442995" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -474,48 +533,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestApiController.php" />
-    <entry file="file://$PROJECT_DIR$/app/Providers/GameServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding>
-            <element signature="e#33#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_11_27_023914_create_lt_url_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/LT_url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UrlFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="e#67#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/HistoryTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/UrlTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -664,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/LT_game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_12_02_070353_create_lt_game_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -702,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/tb_telegram_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/factories/TelegramUserFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -726,25 +729,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="74" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="74" />
-          <folding>
-            <element signature="e#40#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Helpers/BaseHelper.php" />
     <entry file="file://$PROJECT_DIR$/config/app.php">
@@ -771,29 +757,23 @@
         <state relative-caret-position="-2679" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-          <folding>
-            <element signature="e#7#35#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-400">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bus/DispatchesJobs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2014">
-          <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
-          <folding>
-            <element signature="e#48#84#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="94">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Helpers/ApiResponse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="-1805">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
             <element signature="e#31#99#0#PHP" expanded="true" />
@@ -801,20 +781,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/PublicHelper.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/GameApiRepository.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
-          <folding>
-            <element signature="e#36#59#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_06_061615_create_tb_telegram_notice_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/tb_telegram_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/tb_telegram_notice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/LT_game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="4183" column="137" selection-start-line="4183" selection-end-line="4183" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/PublicHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/NoticeMsg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -825,20 +851,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/GameApiService.php">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/HelperRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="177" column="45" selection-start-line="177" selection-start-column="45" selection-end-line="177" selection-end-column="45" />
+        <state relative-caret-position="665">
+          <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
           <folding>
-            <element signature="e#33#62#0#PHP" expanded="true" />
+            <element signature="e#36#70#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/NoticeMsg.php">
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="918">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="e#75#457#0#PHP" />
+            <element signature="e#573#588#0#PHP" />
+            <element signature="e#670#1056#0#PHP" />
+            <element signature="e#1127#1462#0#PHP" />
+            <element signature="e#1537#1857#0#PHP" />
+            <element signature="e#1942#2283#0#PHP" />
+            <element signature="e#2348#2653#0#PHP" />
+            <element signature="e#2716#2871#0#PHP" />
+            <element signature="e#2937#3098#0#PHP" />
+            <element signature="e#3170#3322#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Lottery/GameApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+          <folding>
+            <element signature="e#233#368#0#PHP" />
+            <element signature="e#374#694#0#PHP" />
+            <element signature="e#565#688#0#PHP" />
+            <element signature="e#628#688#0#PHP" />
+            <element signature="e#700#1012#0#PHP" />
+            <element signature="e#883#1006#0#PHP" />
+            <element signature="e#946#1006#0#PHP" />
+            <element signature="e#1018#1367#0#PHP" />
+            <element signature="e#1219#1361#0#PHP" />
+            <element signature="e#1301#1361#0#PHP" />
+            <element signature="e#1373#1703#0#PHP" />
+            <element signature="e#1555#1697#0#PHP" />
+            <element signature="e#1637#1697#0#PHP" />
+            <element signature="e#1709#2030#0#PHP" />
+            <element signature="e#1882#2024#0#PHP" />
+            <element signature="e#1964#2024#0#PHP" />
+            <element signature="e#2036#2304#0#PHP" />
+            <element signature="e#2156#2298#0#PHP" />
+            <element signature="e#2238#2298#0#PHP" />
+            <element signature="e#2310#2584#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/GameApiService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2187">
+          <caret line="229" selection-start-line="229" selection-end-line="229" />
+          <folding>
+            <element signature="e#274#430#0#PHP" />
+            <element signature="e#436#1046#0#PHP" />
+            <element signature="e#592#748#0#PHP" />
+            <element signature="e#664#748#0#PHP" />
+            <element signature="e#757#913#0#PHP" />
+            <element signature="e#829#913#0#PHP" />
+            <element signature="e#1052#2494#0#PHP" />
+            <element signature="e#1431#1529#0#PHP" />
+            <element signature="e#1701#1805#0#PHP" />
+            <element signature="e#1874#2078#0#PHP" />
+            <element signature="e#2128#2456#0#PHP" />
+            <element signature="e#2500#3191#0#PHP" />
+            <element signature="e#2939#3157#0#PHP" />
+            <element signature="e#3197#4048#0#PHP" />
+            <element signature="e#3274#3404#0#PHP" />
+            <element signature="e#3354#3404#0#PHP" />
+            <element signature="e#3413#3698#0#PHP" />
+            <element signature="e#3560#3698#0#PHP" />
+            <element signature="e#3738#4018#0#PHP" />
+            <element signature="e#4054#4261#0#PHP" />
+            <element signature="e#4267#5337#0#PHP" />
+            <element signature="e#4475#5307#0#PHP" />
+            <element signature="e#4684#4973#0#PHP" />
+            <element signature="e#4993#5257#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/GameApiRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
+          <folding>
+            <element signature="e#437#894#0#PHP" />
+            <element signature="e#900#949#0#PHP" />
+            <element signature="e#1784#1833#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

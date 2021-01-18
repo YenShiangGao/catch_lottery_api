@@ -3,9 +3,11 @@
 
 namespace App\Services;
 
+use App\Helpers\NoticeMsg;
 use App\Helpers\PublicHelper;
 use Illuminate\Support\Carbon;
 use App\Repositories\GameApiRepository;
+use Illuminate\Support\Facades\DB;
 
 class GameApiService
 {
@@ -119,7 +121,7 @@ class GameApiService
         } else {
             $repository_res = $this->gameApiRepository->openset_by_date($arr['gameid'], $year, $arr['month'])->toArray();
         }
-        dd($repository_res);
+//        dd($repository_res);
         foreach ($repository_res as $key => $val)
         {
             $result[$key]["Lottery_year"]  = $val[$key]["lottery_year"];
@@ -169,13 +171,13 @@ class GameApiService
         return $result;
     }
 
-    public function openNumCheck()
+    public function openNumCheck ()
     {
         $data = $this->gameApiRepository->game(0)->toArray();
         $today= Carbon::now()->toDateString();
         $today .= ' 00:00:00';
         $Notice_count = 0;
-        dd($this->publicHelper->noticeMsg());
+        $today = "2000-01-01 00:00:00";
         foreach ($data as $key => $value)
         {
             $check_data = $this->gameApiRepository->periods_for_check($value['id'], 0, $today);
@@ -195,12 +197,37 @@ class GameApiService
                     {
                         $msg = $value["cname"]. " 第".$v["period_str"]."期，\n預計開獎時間為".$beLotteryTime;
                         $notice = array(
-                            'noticeCode' => 'delayOpen'
+                            'noticeCode' => 'delayOpen',
+                            'game_id'    => $value['id'],
+                            'period_str' => $v['period_str'],
+                            'user_id'    => $item['user_id'],
+                            'msg'        => $msg
                         );
-
+                        $this->publicHelper->noticeMsg($notice);
                     }
                 }
             }
+        }
+
+        if ( !empty($data) ) {
+            return $Notice_count;
+        } else {
+            return false;
+        }
+    }
+
+    public function checkPeriod ()
+    {
+        $nowtime = Carbon::now();
+        $tomorrow= Carbon::tomorrow();
+        $week    = Carbon::tomorrow()->isoFormat('dddd');
+
+        $data = $this->gameApiRepository->game_by_cycle('1', 'dayss');
+
+        $Notice_count = 0;
+
+        foreach ($data as $k => $v) {
+
         }
     }
 }

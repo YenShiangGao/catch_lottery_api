@@ -28,6 +28,9 @@ class GameApiRepository
         $this->tb_telegram_user = new tb_telegram_user();
     }
 
+    /**
+         *LT_periods相關eloqent處理函式
+         */
     public function lottery_data($periodS, $periodE, $gameid)
     {
         return $this->lt_periods
@@ -48,6 +51,17 @@ class GameApiRepository
                 ->toArray();
     }
 
+    public function period_by_id($id)
+    {
+        return $this->lt_periods
+            ->select('period_str')
+            ->where('id', $id)
+            ->first();
+    }
+
+    /**
+         *LT_history相關eloqent處理函式
+         */
     public function lottery_history($gameid, $period_str)
     {
         return $this->lt_history
@@ -57,6 +71,9 @@ class GameApiRepository
                 ->get();
     }
 
+    /**
+         * LT_url 相關eloqent處理函式
+         */
     public function lottery_url_by_id($id)
     {
         return $this->lt_url
@@ -72,6 +89,9 @@ class GameApiRepository
                 ->get();
     }
 
+    /**
+         *   LT_period_by_time 相關eloqent處理函式
+        */
     public function periodError_by_time($begin, $end)
     {
         return $this->lt_period_error
@@ -79,14 +99,9 @@ class GameApiRepository
                 ->get();
     }
 
-    public function period_by_id($id)
-    {
-        return $this->lt_periods
-                ->select('period_str')
-                ->where('id', $id)
-                ->first();
-    }
-
+    /**
+         *LT_openset 相關eloqent處理函式
+         */
     public function openset_by_year($game_id, $year)
     {
         return $this->lt_openset
@@ -104,6 +119,9 @@ class GameApiRepository
             ->get();
     }
 
+    /**
+         *LT_vac 相關eloqent處理函式
+         */
     public function vac_data ($year = null, $game_id = null)
     {
        $sql = null;
@@ -117,6 +135,10 @@ class GameApiRepository
        return DB::select("select id, game_id, vacStart, vacEnd from LT_vac where 1=1". $sql);
     }
 
+
+    /**
+         *  LT_game相關eloquent 處理
+         */
     public function game($enable)
     {
         return $this->lt_game
@@ -124,6 +146,17 @@ class GameApiRepository
                 ->get();
     }
 
+    public function game_by_cycle($enable, $cycle)
+    {
+        return $this->lt_game
+            ->where('enable', $enable)
+            ->where('cycle', $cycle)
+            ->get();
+    }
+
+    /**
+         * tb_telegram_user相關eloquent 處理
+        */
     public function telegram_by_group_web ($group_id, $enable, $web)
     {
         return $this->tb_telegram_user

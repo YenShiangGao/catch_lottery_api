@@ -94,4 +94,12 @@ Route::group(['prefix'=>'lottery', 'namespace' => 'Lottery'], function () {
          *  @return -- 狀態回傳 &  遊戲ID、期數、使用者ID
          */
     Route::get('openNumCheck', 'GameApiController@openNumCheck');
+
+    /**
+         *  檢查期數表是否已經產生
+         * @url -- GET api / lottery / checkPeriods
+         * @params -- NULL
+         * @return -- 狀態回傳 & 通知次數
+         */
+    Route::get('checkPeriods', 'GameApiController@checkPeriods');
 });
